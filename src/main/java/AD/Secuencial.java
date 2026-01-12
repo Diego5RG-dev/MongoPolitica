@@ -15,21 +15,21 @@ public class Secuencial implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println("--- INICIANDO SECUENCIA DA PRÁCTICA ---");
 
-        // 1. Inserción de datos (desde JSON) [cite: 11, 16]
+        // 1. Inserción de datos
         paisService.importarJson("datos.json");
 
-        // 2. Lectura inicial [cite: 12, 16]
+        // 2. Lectura inicial
         System.out.println("Datos iniciais:");
         paisService.listarTodo("España").forEach(System.out::println);
 
-        // 3. Modificación [cite: 13, 17]
+        // 3. Modificación
         paisService.modificarOrganizacion("España", "Monarquía Parlamentaria");
 
-        // 4. Lectura dos datos modificados [cite: 17]
+        // 4. Lectura dos datos modificados
         System.out.println("Datos tras a modificación:");
         System.out.println(paisService.listarTodo("España"));
 
-        // 5. Eliminación [cite: 14, 17]
+        // 5. Eliminación
         paisService.borrarTodo();
         System.out.println("Base de datos limpa. Secuencia finalizada.");
     }
