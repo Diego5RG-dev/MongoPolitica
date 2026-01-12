@@ -6,7 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
+
 public interface PaisRepository extends MongoRepository<Pais, String> {
-    Pais findByNomPaises(String nome);
-    void deleteByNomPaises(String nome);
+    Pais findByNome(String nome);
+    void deleteByNome(String nome);
 }

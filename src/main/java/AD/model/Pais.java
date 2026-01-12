@@ -1,17 +1,18 @@
 package AD.model;
 
 import java.lang.reflect.Array;
+import java.util.List;
 
 public class Pais {
     private String nome;
     private String organizacion;
-    private Array partidos;
+    private List<String> partidos;
     private int id_presidente;
 
     public Pais() {
     }
 
-    public Pais(String nome, String organizacion, Array partidos, int id_presidente) {
+    public Pais(String nome, String organizacion, List<String> partidos, int id_presidente) {
         this.nome = nome;
         this.organizacion = organizacion;
         this.partidos = partidos;
@@ -34,11 +35,11 @@ public class Pais {
         this.organizacion = organizacion;
     }
 
-    public Array getPartidos() {
+    public List<String> getPartidos() {
         return partidos;
     }
 
-    public void setPartidos(Array partidos) {
+    public void setPartidos(List<String> partidos) {
         this.partidos = partidos;
     }
 
